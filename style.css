@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Shrikhand', cursive;
+violet : #9356DC
+rose : #FF79DA
+bleu : #99E2D0
+logo coeur plein : <i class="fas fa-heart"></i>
+*/
+/*général*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+}
+
+a, a::after, a:checked, a:visited {
+  text-decoration: none;
+  text-transform: none;
+  color: inherit;
+}
+
+#menu {
+  background-color: #F2F2F2;
+}
+
+.logo {
+  font-family: "Shrikhand", cursive;
+}
+
+.secondary {
+  color: #FF79DA;
+}
+
+.tertiary {
+  color: #99E2D0;
+}
+
+.primary {
+  color: #9356DC;
+}
+
+.quaternary {
+  color: #7e7e7e;
+}
+
+#menu, footer, .fonctionnement {
+  padding: 20px;
+}
+
+div.details h3, #menu h4 {
+  font-weight: 400;
+}
+
+/*header*/
+header img {
+  width: 175px;
+}
+
+/*section présentation*/
+.loc {
+  background-color: #EAEAEA;
+  box-shadow: inset 0px 5px 5px 0px #ccc;
+  color: #2b2b2b;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loc #logoLocalisation {
+  margin-right: 15px;
+}
+.loc h3 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.loc, .place, .details {
+  text-align: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F2F2F2;
+  padding: 50px 0px;
+}
+.details .explore {
+  border-radius: 30px;
+  max-height: 60px;
+  width: 210px;
+  min-width: 30px;
+  background-color: #9356DC;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  margin: 0 70px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.details .explore h4 {
+  font-weight: 100;
+  margin: 0;
+}
+
+.container {
+  background-color: #9356DC;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container span {
+  font-size: 20px;
+  color: white;
+}
+
+div.fonctionnement div {
+  display: flex;
+  align-items: center;
+}
+
+div.fonctionnement h4, div.details h4 {
+  color: #fff;
+}
+
+/*section restaurants*/
+.menu {
+  background: #FFFF;
+  border-radius: 20px;
+  box-shadow: 1px 1px 6px #ccc;
+  margin: 20px 0px;
+}
+.menu img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 154px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 18px 18px 0px 0px;
+}
+
+.fa-heart:hover {
+  color: #FF79DA;
+}
+
+.text {
+  position: relative;
+  padding: 15px;
+}
+.text .fa-heart {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+/*section menu*/
+/*footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #000;
+  color: #fff;
+}
+footer .foot {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=style.css.map */
