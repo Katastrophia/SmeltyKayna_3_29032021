@@ -1,0 +1,13 @@
+@mixin tag_new($color:$color-tertiary){
+  position: absolute;
+  top : 15px;
+  right : 10px;
+  padding: 7px;
+  width: 80px;
+  align-content: center;
+  background-color: $color;
+  color: darken($color, 35%);
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 500;
+}
