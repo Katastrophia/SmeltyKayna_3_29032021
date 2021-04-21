@@ -28,14 +28,14 @@ a, a::after, a:checked, a:visited{
   text-transform: none;
   color: inherit;
 }
-#restaurant{
+#restaurant, .menu{
   background-color: $color-background-light;
 }
 .logo {
   font-family: $font-primary, cursive;
 }
 
-#restaurant, footer, .fonctionnement{
+#restaurant, footer, .fonctionnement {
   padding: 20px;
 }
 div.details h3, #restaurant h4{
@@ -46,6 +46,9 @@ div.details h3, #restaurant h4{
 }
 .explore, .command {
     background: $color-mix-primary-secondary;
+    // &:hover {
+    //   background-color: darken($color-mix-primary-secondary, 5);
+    // }
   }
 
 .fa-store {
@@ -130,7 +133,7 @@ header img{
   }
 }
 
-div.fonctionnement div{
+div.fonctionnement div {
   display : flex;
   align-items: center;
 }
@@ -142,7 +145,7 @@ div.fonctionnement h4, div.explore h4 {
   padding: 0 15px;
 }
 /*section restaurants*/
-.restaurant {
+.restaurant, .vignette {
   background: #FFFF;
   border-radius: 20px;
   box-shadow: 1px 1px 6px #ccc;
@@ -163,36 +166,94 @@ div.fonctionnement h4, div.explore h4 {
   }
 }
 
-.text{
+.text {
   position: relative;
   padding: 15px;
-  .fa-heart{
+  .fa-heart {
     position: absolute;
     top : 30px;
     right: 30px;
   }
-  .fas.fa-heart{
-    color: rgb(red, 0);
-    height: 0;
+  .fas.fa-heart {
+    color: rgba($color-primary, 0);
+    overflow: hidden;
+    transition: all 0.5s linear;
   }
   a:hover {
-      .fas.fa-heart {
-      color: $color-primary;
-      height: auto;
-      transition: height 5s ease;
+    .fas.fa-heart {
+      color: rgba($color-primary, 1);
+    }
+  }
+}
+.vignette {
+  .tag_check {
+    // display: none;
+  }
+  &:hover {
+    width: 80%;
+    border-radius: 20px 0 0 20px;
+    .tag_check{
+      @include tag_check;
     }
   }
 }
 
 
 /*section restaurant*/
+/*section menu*/
+
+#menu img{
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  max-height: 500px;
+
+}
+.menu {
+  border-radius: 40px 40px 0 0;
+  padding : 10px 20px;
+  position: relative;
+  top : -50px;
+}
+.menu_header {
+  .fa-heart {
+    position : absolute;
+    right: 40px;
+    top: 30px;
+  }
+  .fas.fa-heart {
+    color: rgba($color-primary, 0);
+    overflow: hidden;
+    transition: all 0.5s linear;
+  }
+  a:hover {
+    .fas.fa-heart {
+      color: rgba($color-primary, 1);
+    }
+  }
+}
+div.line {
+  border-top : solid 3.5px $color-tertiary;
+  width: 42px;
+  height: 0px;
+}
+
+.vignette {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+// .tag_check {
+//   i {
+//     transition :
+//   }
+//   &:hover {
+//
+//   }
+// }
 /*footer*/
 footer {
-  // display: flex;
-  // flex-direction: column;
-  //justify-content: space-around;
   width: auto;
-  background-color: #000;
+  background-color: #353535;
   color: #fff;
   .foot {
     display: flex;
@@ -206,6 +267,7 @@ footer {
    display: inline-flex;
    flex-direction: row;
    align-items: center;
+   line-height: 2px;
   }
 }
 @media only screen and (min-width: 768px) {
