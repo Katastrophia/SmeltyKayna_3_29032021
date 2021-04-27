@@ -15,6 +15,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  //visibility: hidden;
 }
 header{
   height: 70px;
@@ -38,18 +39,13 @@ a, a::after, a:checked, a:visited{
 #restaurant, footer, .fonctionnement {
   padding: 20px;
 }
-div.details h3, #restaurant h4{
+div.details h3, #restaurant h4, .vignette h4{
   font-weight: 400;
 }
 .container {
   background-color: $color-primary;
 }
-.explore, .command {
-    background: $color-mix-primary-secondary;
-    // &:hover {
-    //   background-color: darken($color-mix-primary-secondary, 5);
-    // }
-  }
+
 
 .fa-store {
   color: $color-primary;
@@ -57,6 +53,80 @@ div.details h3, #restaurant h4{
 .fa-mobile-alt, .fa-list-ul {
   color: $color-quaternary;
 }
+
+
+// #loader {
+//   position: absolute;
+//   visibility: visible;
+//   top: 400px;
+//   margin: 0 auto;
+//   color: #CCCC;
+//   font-size: 20px;
+//   width: 1em;
+//   height: 1em;
+//   border-radius: 50%;
+//   position: relative;
+//   text-indent: -9999em;
+//   -webkit-animation: load4 1.3s 4 linear;
+//   animation: load4 1.3s 4 linear;
+//   -webkit-transform: translateZ(0);
+//   -ms-transform: translateZ(0);
+//   transform: translateZ(0);
+// }
+// @-webkit-keyframes load4 {
+//   0%,
+//   100% {
+//     box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+//   }
+//   12% {
+//     box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+//   }
+//   25% {
+//     box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+//   }
+//   37% {
+//     box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+//   }
+//   50% {
+//     box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+//   }
+//   62% {
+//     box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+//   }
+//   75% {
+//     box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+//   }
+//   87% {
+//     box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+//   }
+// }
+// @keyframes load4 {
+//   0%,
+//   100% {
+//     box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+//   }
+//   12% {
+//     box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+//   }
+//   25% {
+//     box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+//   }
+//   37% {
+//     box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+//   }
+//   50% {
+//     box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+//   }
+//   62% {
+//     box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+//   }
+//   75% {
+//     box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+//   }
+//   87% {
+//     box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+//   }
+// }
 
 /*header*/
 header img{
@@ -96,7 +166,12 @@ header img{
     align-content: center;
     padding: 15px 10px;
     margin: 0 auto 50px auto;
-    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.20);
+    box-shadow: $shadow;
+    background: $color-mix-primary-secondary;
+    &:hover {
+      background: $lighten-filter, $color-mix-primary-secondary;
+      box-shadow: $shadow-active;
+    }
     h4 {
       font-weight: 400;
       margin: 0;
@@ -186,15 +261,51 @@ div.fonctionnement h4, div.explore h4 {
   }
 }
 .vignette {
-  .tag_check {
-    // display: none;
-  }
+  display: flex;
+  max-height: 155px;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
   &:hover {
-    width: 80%;
-    border-radius: 20px 0 0 20px;
-    .tag_check{
-      @include tag_check;
+    .tag_check {
+      width: 60px;
     }
+    .fa-check-circle {
+      transform: rotate(0deg);
+    }
+  }
+  .text {
+    flex: 1;
+    margin-right: 20px;
+    max-height: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    h3, h4 {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  .tag_check {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: $color-tertiary;
+  border-radius: 0 20px 20px 0;
+  width: 0px;
+  transition: all 0.4s linear;
+  text-align: center;
+  overflow: hidden;
+  }
+  .fa-check-circle {
+      color: white;
+      transition: all 0.4s linear;
+      transform: rotate(180deg);
+  }
+  span {
+    position: relative;
+    top : 56px;
+    right: 20px;
   }
 }
 
@@ -238,18 +349,36 @@ div.line {
   height: 0px;
 }
 
-.vignette {
-  animation-duration: 3s;
-  animation-name: slidein;
+@keyframes fadein {
+  from {
+    display: none;
+    margin-top: 10px;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    margin-top: 0px;
+    opacity: 1;
+  }
 }
-// .tag_check {
-//   i {
-//     transition :
-//   }
-//   &:hover {
-//
-//   }
-// }
+// test
+a.card {
+  animation-duration: 2s;
+  animation-name: fadein;
+}
+.vignette-card1 {
+  animation-delay: 0.4s;
+}
+
+.vignette-card2 {
+  animation-delay: 0.8s;
+}
+.vignette-card3 {
+  animation-delay: 1.2s;
+}
+
+
+
 /*footer*/
 footer {
   width: auto;

@@ -40,16 +40,12 @@ a, a::after, a:checked, a:visited {
   padding: 20px;
 }
 
-div.details h3, #restaurant h4 {
+div.details h3, #restaurant h4, .vignette h4 {
   font-weight: 400;
 }
 
 .container {
   background-color: #9356DC;
-}
-
-.explore, .command {
-  background: linear-gradient(354deg, #9356dc 0%, #ff79da 100%);
 }
 
 .fa-store {
@@ -102,6 +98,11 @@ header img {
   padding: 15px 10px;
   margin: 0 auto 50px auto;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(354deg, #9356dc 0%, #ff79da 100%);
+}
+.explore:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(354deg, #9356dc 0%, #ff79da 100%);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
 }
 .explore h4 {
   font-weight: 400;
@@ -198,13 +199,49 @@ div.fonctionnement h4, div.explore h4 {
   color: #9356dc;
 }
 
-.vignette:hover {
-  width: 80%;
-  border-radius: 20px 0 0 20px;
+.vignette {
+  display: flex;
+  max-height: 155px;
 }
 .vignette:hover .tag_check {
-  border-radius: 0 20px 20px 0;
+  width: 60px;
+}
+.vignette:hover .fa-check-circle {
+  transform: rotate(0deg);
+}
+.vignette .text {
+  flex: 1;
+  margin-right: 20px;
+  max-height: 140px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.vignette .text h3, .vignette .text h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.vignette .tag_check {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  width: 0px;
+  transition: all 0.4s linear;
+  text-align: center;
+  overflow: hidden;
+}
+.vignette .fa-check-circle {
+  color: white;
+  transition: all 0.4s linear;
+  transform: rotate(180deg);
+}
+.vignette span {
+  position: relative;
+  top: 56px;
+  right: 20px;
 }
 
 /*section restaurant*/
@@ -243,9 +280,33 @@ div.line {
   height: 0px;
 }
 
-.vignette {
-  animation-duration: 3s;
-  animation-name: slidein;
+@keyframes fadein {
+  from {
+    display: none;
+    margin-top: 10px;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+a.card {
+  animation-duration: 2s;
+  animation-name: fadein;
+}
+
+.vignette-card1 {
+  animation-delay: 0.4s;
+}
+
+.vignette-card2 {
+  animation-delay: 0.8s;
+}
+
+.vignette-card3 {
+  animation-delay: 1.2s;
 }
 
 /*footer*/

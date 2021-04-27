@@ -1,10 +1,21 @@
+//fonts
 $font-primary: 'Shrikhand';
 $font-secondary: 'roboto';
 
+//colors
 $color-primary: #9356DC;//violet
 $color-secondary: #FF79DA;// rose
 $color-tertiary: #99E2D0;//bleu
 $color-quaternary: #7e7e7e;//gris
 $color-background-light: #F6F6F6;// gris clair
 $color-background-dark: #EAEAEA;// gris foncé
+
+//buttons
 $color-mix-primary-secondary: linear-gradient(354deg, rgba($color-primary, 1) 0%, rgba($color-secondary, 1) 100%);
+$lighten-filter: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+$shadow: 0px 5px 10px 0px rgba(0,0,0,0.20);
+$shadow-active: 0px 5px 10px 0px rgba(0,0,0,0.40);
+
+
+//Animations
+$card-delay: .8s;
