@@ -242,12 +242,23 @@ div.fonctionnement h4, div.explore h4 {
 }
 
 .text {
-  position: relative;
   padding: 15px;
+  max-height: 140px;
+  overflow: hidden;
+  white-space: nowrap;
+  h3, h4 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+div.description {
+  .text {
+    margin-right: 40px;
+  }
   .fa-heart {
     position: absolute;
-    top : 30px;
-    right: 30px;
+    bottom : 70px;
+    right: 20px;
   }
   .fas.fa-heart {
     color: rgba($color-primary, 0);
@@ -263,8 +274,6 @@ div.fonctionnement h4, div.explore h4 {
 .vignette {
   display: flex;
   max-height: 155px;
-  // overflow: hidden;
-  // text-overflow: ellipsis;
   &:hover {
     .tag_check {
       width: 60px;
@@ -276,13 +285,6 @@ div.fonctionnement h4, div.explore h4 {
   .text {
     flex: 1;
     margin-right: 20px;
-    max-height: 140px;
-    overflow: hidden;
-    white-space: nowrap;
-    h3, h4 {
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
   }
   .tag_check {
   display: flex;
@@ -349,34 +351,58 @@ div.line {
   height: 0px;
 }
 
+// test
+.vignette {
+  animation: fadein 3s;
+  margin-top: 0px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+
+}
+.vignette1, .vignette2, .vignette3 {
+  animation-delay: 0s;
+}
+.vignette4, .vignette5, .vignette6 {
+  animation-delay: 1s;
+}
+.vignette7, .vignette8, .vignette9 {
+  animation-delay: 1.5s;
+}
 @keyframes fadein {
-  from {
-    display: none;
-    margin-top: 10px;
+  0% {
+    margin-top: 20px;
     opacity: 0;
   }
-  to {
-    display: block;
-    margin-top: 0px;
+  100% {
+    margin-top: 10px;
     opacity: 1;
+
   }
 }
-// test
-a.card {
-  animation-duration: 2s;
-  animation-name: fadein;
-}
-.vignette-card1 {
-  animation-delay: 0.4s;
-}
-
-.vignette-card2 {
-  animation-delay: 0.8s;
-}
-.vignette-card3 {
-  animation-delay: 1.2s;
-}
-
+// @-moz-keyframes fadein {
+//   from {
+//     display: none;
+//     margin-top: 10px;
+//     opacity: 0;
+//   }
+//   to {
+//     display: block;
+//     margin-top: 0px;
+//     opacity: 1;
+//   }
+// }
+// @-webkit-keyframes fadein {
+//   from {
+//     display: none;
+//     margin-top: 10px;
+//     opacity: 0;
+//   }
+//   to {
+//     display: block;
+//     margin-top: 0px;
+//     opacity: 1;
+//   }
+// }
 
 
 /*footer*/
