@@ -56,7 +56,7 @@ div.details h3, #restaurant h4, .vignette h4{
 //loader
 
 
-#loader {
+#loader span{
   position: absolute;
   visibility: visible;
   top: 400px;
@@ -68,8 +68,8 @@ div.details h3, #restaurant h4, .vignette h4{
   border-radius: 50%;
   position: relative;
   text-indent: -9999em;
-  -webkit-animation: spinner 1.3s 4 linear;
-  animation: spinner 1.3s 4 linear;
+  -webkit-animation: spinner 1.3s 25 linear;
+  animation: spinner 1.3s 25 linear;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
