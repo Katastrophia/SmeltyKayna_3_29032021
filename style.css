@@ -36,7 +36,7 @@ a, a::after, a:checked, a:visited {
   font-family: "Shrikhand", cursive;
 }
 
-#restaurant, footer, .fonctionnement {
+#restaurant, footer, #fonctionnement {
   padding: 20px;
 }
 
@@ -56,75 +56,40 @@ div.details h3, #restaurant h4, .vignette h4 {
   color: #7e7e7e;
 }
 
-#loader span {
-  position: absolute;
-  visibility: visible;
-  top: 400px;
-  margin: 0 auto;
-  color: #99E2D0;
-  font-size: 20px;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  position: relative;
-  text-indent: -9999em;
-  -webkit-animation: spinner 1.3s 25 linear;
-  animation: spinner 1.3s 25 linear;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
+#loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999999;
+  background: rgba(0, 0, 0, 0.9);
+  animation: loadspinner 4s cubic-bezier(0.32, 0, 0.67, 0);
+  animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes spinner {
-  0%, 100% {
-    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
-  }
-  12% {
-    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
-  }
-  25% {
-    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
-  }
-  37% {
-    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
-  }
-  50% {
-    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
-  }
-  62% {
-    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
-  }
-  75% {
-    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
-  }
-  87% {
-    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+@keyframes loadspinner {
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
 }
-@keyframes spinner {
-  0%, 100% {
-    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
-  }
-  12% {
-    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
-  }
-  25% {
-    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
-  }
-  37% {
-    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
-  }
-  50% {
-    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
-  }
-  62% {
-    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
-  }
-  75% {
-    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
-  }
-  87% {
-    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+#loader span {
+  display: block;
+  top: 400px;
+  margin: 0 auto;
+  border: 6px double #7e7e7e;
+  border-top-color: #9356DC;
+  width: 0;
+  height: 0;
+  padding: 20px;
+  border-radius: 30px;
+  position: relative;
+  -webkit-animation: rotate 1.3s infinite ease-in-out;
+  top: 50%;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
   }
 }
 /*header*/
@@ -180,6 +145,13 @@ header img {
   margin: 0;
 }
 
+a.back {
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
 .container {
   position: absolute;
   left: 20px;
@@ -209,12 +181,12 @@ header img {
   background-color: #f2eafb;
 }
 
-div.fonctionnement div {
+#fonctionnement div {
   display: flex;
   align-items: center;
 }
 
-div.fonctionnement h4, div.explore h4 {
+#fonctionnement h4, div.explore h4 {
   color: #fff;
 }
 
@@ -223,6 +195,11 @@ div.fonctionnement h4, div.explore h4 {
 }
 
 /*section restaurants*/
+div.entrees > h3, div.plats > h3, div.desserts > h3 {
+  font-weight: normal;
+  margin-bottom: 3px;
+}
+
 .restaurant, .vignette {
   background: #FFFF;
   border-radius: 20px;
@@ -253,7 +230,7 @@ div.fonctionnement h4, div.explore h4 {
 }
 
 .text {
-  padding: 15px;
+  padding: 10px;
   max-height: 140px;
   overflow: hidden;
   white-space: nowrap;
@@ -261,6 +238,7 @@ div.fonctionnement h4, div.explore h4 {
 .text h3, .text h4 {
   text-overflow: ellipsis;
   overflow: hidden;
+  margin: 5px;
 }
 
 div.description .text {
@@ -268,7 +246,7 @@ div.description .text {
 }
 div.description .fa-heart {
   position: absolute;
-  bottom: 70px;
+  bottom: 18px;
   right: 20px;
 }
 div.description .fas.fa-heart {
@@ -309,13 +287,20 @@ div.description a:hover .fas.fa-heart {
 }
 .vignette .fa-check-circle {
   color: white;
+  font-size: 22px;
   transition: all 0.4s linear;
   transform: rotate(180deg);
 }
+.vignette h4 {
+  font-size: 15px;
+}
 .vignette span {
   position: relative;
-  top: 56px;
+  top: 26px;
   right: 20px;
+}
+.vignette span h3 {
+  font-size: 16px;
 }
 
 /*section restaurant*/
@@ -352,6 +337,7 @@ div.line {
   border-top: solid 3.5px #99E2D0;
   width: 42px;
   height: 0px;
+  margin-bottom: 20px;
 }
 
 .vignette {
@@ -401,6 +387,26 @@ footer a {
   flex-direction: row;
   align-items: center;
   line-height: 2px;
+}
+
+@media only screen and (min-width: 900px) {
+  .vignettes_restaurants, .menu {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+
+  div.restaurant {
+    margin: 20px 20px;
+    width: 600px;
+  }
+
+  .card, .vignette {
+    margin: 20px 20px;
+    width: 300px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
