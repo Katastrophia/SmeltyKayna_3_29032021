@@ -79,7 +79,7 @@ div.details h3, #restaurant h4, .vignette h4{
   padding: 20px;
   border-radius: 30px;
   position: relative;
-  -webkit-animation: rotate 1.3s infinite ease-in-out;
+  -webkit-animation: rotate 1s infinite ease-in-out;
   top: 50%;
 }
 @-webkit-keyframes rotate {
@@ -188,6 +188,12 @@ div.entrees>h3, div.plats>h3, div.desserts>h3 {
   font-weight: normal;
   margin-bottom: 3px;
 }
+.restaurant:hover {
+  background: $lighten-filter, white;
+  box-shadow: $shadow-active;
+  opacity: 80%;
+}
+
 .restaurant, .vignette {
   background: #FFFF;
   border-radius: 20px;
@@ -381,16 +387,19 @@ footer {
 // media
 
 @media only screen and (min-width: 900px) {
-    .vignettes_restaurants, .menu{
+    .vignettes_restaurants, .restaurants, .menu{
       display: flex;
       flex-wrap: wrap;
       max-width: 1400px;
       margin: 0 auto;
+    }
+    .vignettes_restaurants, .menu {
       justify-content: space-around;
     }
     div.restaurant{
-      margin: 20px 20px;
-      width: 600px;
+      margin: 0 auto 20px 0;
+      max-width: 600px;
+      width: 45%;
     }
     .card, .vignette {
       margin: 20px 20px;
