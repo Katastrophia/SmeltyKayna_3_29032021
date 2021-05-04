@@ -59,7 +59,7 @@ div.details h3, #restaurant h4, .vignette h4{
   position: fixed;
   z-index: 9999999;
   background: rgba(0,0,0,0.9);
-  animation: loadspinner 4s cubic-bezier(0.32, 0, 0.67, 0);
+  animation: loadspinner 3s cubic-bezier(0.32, 0, 0.67, 0);
   animation-fill-mode: forwards;
 }
 @keyframes loadspinner {
@@ -87,6 +87,7 @@ div.details h3, #restaurant h4, .vignette h4{
     -webkit-transform: rotate(360deg);
   }
 }
+
 /*header*/
 header img{
   width: 175px;
@@ -240,7 +241,7 @@ div.description {
     overflow: hidden;
     transition: all 0.5s linear;
   }
-  a:hover {
+  span:hover {
     .fas.fa-heart {
       color: rgba($color-primary, 1);
     }
