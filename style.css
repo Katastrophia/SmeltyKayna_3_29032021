@@ -190,8 +190,9 @@ a.back {
   color: #fff;
 }
 
-.fas:not(.fa-heart) {
-  padding: 0 15px;
+.fas:not(.fa-heart, .fa-foot) {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /*section restaurants*/
@@ -258,10 +259,12 @@ div.description .fa-heart {
 div.description .fas.fa-heart {
   color: rgba(147, 86, 220, 0);
   overflow: hidden;
+  opacity: 0;
   transition: all 0.5s linear;
 }
 div.description span:hover .fas.fa-heart {
   color: #9356dc;
+  opacity: 1;
 }
 
 .vignette {
@@ -322,7 +325,7 @@ div.description span:hover .fas.fa-heart {
   border-radius: 40px 40px 0 0;
   padding: 10px 20px;
   position: relative;
-  top: -50px;
+  margin-top: -50px;
 }
 
 .menu_header .fa-heart {
@@ -381,12 +384,15 @@ footer {
   background-color: #353535;
   color: #fff;
 }
+footer h2 {
+  font-weight: normal;
+}
 footer .foot {
   display: flex;
   flex-direction: column;
 }
 footer .fas {
-  padding-left: 0px;
+  padding-right: 15px;
 }
 footer a {
   display: inline-flex;
@@ -403,6 +409,10 @@ footer a {
     margin: 0 auto;
   }
 
+  .menu {
+    margin-top: -50px;
+  }
+
   .vignettes_restaurants, .menu {
     justify-content: space-around;
   }
@@ -413,9 +423,21 @@ footer a {
     width: 45%;
   }
 
-  .card, .vignette {
-    margin: 20px 20px;
+  .card {
+    margin: 0px 20px 20px 20px;
     width: 300px;
+  }
+
+  .vignette {
+    margin: 40px 20px 20px 20px;
+    width: 300px;
+  }
+
+  footer {
+    text-align: center;
+  }
+  footer div.foot {
+    align-items: center;
   }
 }
 
