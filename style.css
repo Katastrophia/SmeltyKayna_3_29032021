@@ -303,13 +303,13 @@ div.description span:hover .fas.fa-heart {
 .vignette h4 {
   font-size: 15px;
 }
-.vignette span {
-  position: relative;
-  top: 26px;
-  right: 20px;
-}
-.vignette span h3 {
+.vignette h3 {
   font-size: 16px;
+}
+.vignette h3 span {
+  position: relative;
+  top: 22px;
+  right: 20px;
 }
 
 /*section restaurant*/
